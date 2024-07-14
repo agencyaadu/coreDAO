@@ -62,7 +62,7 @@ function App() {
     return (
       <button
         onClick={connectWalletHandler}
-        // className="btn-primary w-40 rounded mt-10"
+        className="btn-primary w-40 rounded mt-10"
       >
         Connect Wallet
       </button>

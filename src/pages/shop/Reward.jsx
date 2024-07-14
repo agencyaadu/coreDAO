@@ -5,9 +5,9 @@ import { Product } from "./product";
 import "./shop.css";
 import "../../App.css"
 import { ethers } from 'ethers'
-import Water from "../../contract/Water.json"
-import TPurchase from "../../contract/TPurchase.json"
-import { WalletContextProvider } from "../../context/wallet-context";
+import { WaterContractAddress, WaterABI } from "../../constant";
+
+
 
 export const Reward = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
@@ -16,33 +16,6 @@ export const Reward = () => {
   const currentAccount = localStorage.getItem("userWalletAddress")
 
   console.log("afd"+currentAccount)
-
-  
-  // const TPurchaseContractAddress = '0x58ddc9e1a890119e92fd502da4c1da28bc38603a'
-    const TPurchaseContractAddress = '0x01Dda2C9e11974562cB2e13E31ea1c1Bf3274C6E'
-    const TPurchaseABI = TPurchase
-
-    const WaterContractAddress = '0x62B5666d596F0e476b1Bc699C8355308bBB73D73'
-    const WaterABI = Water
-  
-    // const calculateReward = () => {
-    //   let totalReward
-    //   for (let i = 0; i < PRODUCTS.length; i++) {
-    //     const product = PRODUCTS[i];
-    //     const quantity = cartItems[product.id];
-
-    //     console.log(`Product ID: ${product.id}, Quantity: ${quantity}, Reward: ${product.reward}`);
-        
-    //     if (quantity !== 0) {
-    //       totalReward += quantity * product.reward  
-    //       console.log("price"+quantity)
-    //     }
-    //   }
-    //   console.log("lafhl"+totalReward)
-    //   localStorage.setItem('totalReward',totalReward)
-    //   console.log("Total Reward:"+localStorage.getItem('totalReward'))
-
-    // }
   
     const rewardSystem = async () => {
       try {

@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from 'ethers'
-import Water from "../contract/Water.json"
-import TPurchase from "../contract/TPurchase.json"
+import { TPurchaseContractAddress, TPurchaseABI } from "../constant";
 
-export const Contact = () => {
-  const TPurchaseContractAddress = '0x01Dda2C9e11974562cB2e13E31ea1c1Bf3274C6E'
-  const TPurchaseABI = TPurchase
-
-  const WaterContractAddress = '0x62B5666d596F0e476b1Bc699C8355308bBB73D73'
-  const WaterABI = Water
+export const History = () => {
 
   const [ transactions, setTransactions ] = useState([]);
 

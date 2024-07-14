@@ -3,57 +3,73 @@ import product2 from "./assets/products/2.png";
 import product3 from "./assets/products/3.png";
 import product4 from "./assets/products/4.png";
 import product5 from "./assets/products/5.png";
-import product6 from "./assets/products/6.webp";
-import product7 from "./assets/products/7.webp";
-import product8 from "./assets/products/8.webp";
+import product6 from "./assets/products/6.png";
+import product7 from "./assets/products/7.png";
+import product8 from "./assets/products/8.png";
 
 export const PRODUCTS = [
   {
     id: 1,
-    productName: "IPhone",
+    productName: "Yellow Round T shirt",
     price: 999.0,
     productImage: product1,
+    productType: "T-Shirt",
+    reward: 300,
   },
   {
     id: 2,
-    productName: "Macbook Pro 2022 (M1)",
+    productName: "Black Round T shirt",
     price: 1999.0,
     productImage: product2,
+    productType: "T-Shirt",
+    reward: 300,
   },
   {
     id: 3,
-    productName: "Cannon M50 Camera",
-    price: 699.0,
+    productName: "Light Red Round T shirt",
+    price: 700.0,
     productImage: product3,
+    productType: "T-Shirt",
+    reward: 300,
   },
   {
     id: 4,
-    productName: "WLS Van Gogh Denim Jacket",
-    price: 228.0,
+    productName: "Brown Round T shirt",
+    price: 250.0,
     productImage: product4,
+    productType: "T-Shirt",
+    reward: 300,
   },
   {
     id: 5,
-    productName: "LED Light Strips",
-    price: 19.99,
+    productName: "Green Round T shirt",
+    price: 199,
     productImage: product5,
+    productType: "T-Shirt",
+    reward: 300,
   },
   {
     id: 6,
-    productName: "SPECTRUM LS TEE",
-    price: 68.0,
+    productName: "Black slim fit T shirt",
+    price: 150.0,
     productImage: product6,
+    productType: "T-Shirt",
+    reward: 300,
   },
   {
     id: 7,
-    productName: "AUTO SERVICE SHIRT by GOLF WANG",
-    price: 120.0,
+    productName: "Eagle T shirt",
+    price: 270.0,
     productImage: product7,
+    productType: "T-Shirt",
+    reward: 300,
   },
   {
     id: 8,
-    productName: "DON'T TRIP UNSTRUCTURED HAT",
-    price: 40.0,
+    productName: "Orange Round T shirt",
+    price: 400.0,
     productImage: product8,
+    productType: "T-Shirt",
+    reward: 300,
   },
 ];

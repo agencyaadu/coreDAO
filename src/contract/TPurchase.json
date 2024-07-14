@@ -1,0 +1,167 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "usrAdd",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "productId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "prodName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "prodType",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "qty",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pCost",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rwd",
+				"type": "uint256"
+			}
+		],
+		"name": "purchaseProduct",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "allPurchases",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "userWalletAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "productName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "productType",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "productQty",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "productCost",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reward",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllPurchases",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "userWalletAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productType",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "productQty",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "productCost",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct ProductPurchase.Purchase[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "water",
+		"outputs": [
+			{
+				"internalType": "contract Water",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

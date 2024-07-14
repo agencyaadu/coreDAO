@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .App {
   width: 100%;
   height: auto;
@@ -8,4 +13,13 @@
 body {
   padding: 0;
   margin: 0;
+}
+
+@layer components {
+	:root{
+
+	}
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
 }

@@ -50,35 +50,38 @@ export const History = () => {
     <div className="shop">
       <div className="shopTitle">
           {/* <button onClick={pastTransaction()}>Past Transaction</button> */}
-        <h1>🌊 See Past Transaction</h1>
+        <h1>🌊 Transaction History</h1>
+        <br/>
+        <div className="flex justify-center">
         <table>
         <thead>
           <tr>
-            <th>T ID</th>
-            <th>User Wallet Address</th>
-            <th>Product Name</th>
-            <th>Product Type</th>
-            <th>Product Quantity</th>
-            <th>Product Cost</th>
-            <th>Reward</th>
-            <th>Timestamp</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >T ID</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >User Wallet Address</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >Product Name</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >Product Type</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >Product Quantity</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >Product Cost</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >Reward</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 border border-gray-300 uppercase tracking-wider" >Timestamp</th>
           </tr>
         </thead>
         <tbody>
           {transactions.map((transaction, index) => (
             <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{transaction[0]}</td>
-              <td>{transaction[2]}</td>
-              <td>{transaction[3]}</td>
-              <td>{transaction[4]}</td>
-              <td>{transaction[5].toString()}</td>
-              <td>{transaction[6].toString()}</td>
-              <td>{transaction[7].toString()}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{index + 1}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{transaction[0].toString()}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{transaction[2]}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{transaction[3]}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{transaction[4]}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{transaction[5].toString()}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{transaction[6].toString()}</td>
+              <td className="text-xs px-6 py-4 whitespace-wrap border border-gray-300" >{transaction[7].toString()}</td>
             </tr>
           ))}
         </tbody>
       </table>
+        </div>
       </div>
     </div>
   );

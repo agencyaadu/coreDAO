@@ -1,7 +1,7 @@
 import Water from './contract/Water.json'
 import TPurchase from './contract/TPurchase.json'
 
-export const WaterContractAddress = '0x3c81c82655e98ae183a1d2fc4c038be15d2a252f'
+export const WaterContractAddress = '0x62B5666d596F0e476b1Bc699C8355308bBB73D73'
 
 export const WaterABI = Water
 

@@ -1,4 +1,4 @@
-  import React, { useContext, useState } from "react";
+  import React, { useContext } from "react";
   import { ShopContext } from "../../context/shop-context";
   import { PRODUCTS } from "../../products";
   import { CartItem } from "./cart-item";
@@ -16,9 +16,30 @@
     const currentAccount = localStorage.getItem("userWalletAddress")
 
     console.log("afd"+currentAccount)
+
+    const calculateReward = () => {
+      let totalReward = 0;
+      for (let i = 0; i < PRODUCTS.length; i++) {
+        const product = PRODUCTS[i];
+        const quantity = cartItems[product.id];
+        
+        if (quantity !== 0) {
+          console.log('Write to contract')
+          console.log(currentAccount)
+          totalReward += quantity * product.reward
+          
+          
+          console.log('Wait for the transaction to be confirmed')
+  
+          
+        }
+      }
+      console.log('jv'+totalReward)
+      localStorage.setItem('totalReward',totalReward)
+    }
     
       const storePurchase = async () => {
-        let totalReward = 0;
+        
         try {
           const { ethereum } = window
       
@@ -51,7 +72,7 @@
                   product.price, 
                   product.reward
                 )
-                totalReward += quantity * product.reward
+                // totalReward += quantity * product.reward
                 
                 
                 console.log('Wait for the transaction to be confirmed')
@@ -63,8 +84,8 @@
                 
               }
             }
-            console.log('jv'+totalReward)
-            localStorage.setItem('totalReward',totalReward)
+            // console.log('jv'+totalReward)
+            // localStorage.setItem('totalReward',totalReward)
             // console.log(`Product ID: ${product.id}, Quantity: ${quantity}, Reward: ${product.reward}`);
         
       
@@ -99,7 +120,7 @@
             <button
               onClick={() => {
                 checkout();
-                // calculateReward();
+                calculateReward();
                 storePurchase();
                 navigate("/reward");
               }}

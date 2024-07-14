@@ -7,7 +7,6 @@ import { Reward } from "./pages/shop/Reward";
 import { History } from "./pages/history";
 import { Cart } from "./pages/cart/cart";
 import { ShopContextProvider } from "./context/shop-context";
-import { ethers } from 'ethers'
 import { WaterContractAddress, CORESCAN_BASE_URL } from "./constant";
 
 

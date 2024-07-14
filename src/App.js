@@ -60,12 +60,30 @@ function App() {
 
   const connectWalletButton = () => {
     return (
-      <button
+      <div className="mx-auto max-w-screen-xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div className="text-center">
+        <div className="mb-12">
+          <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center px-2">
+              {/* <img className="w-12 mx-1" src="src/public/logo.png" /> */}
+              <p className="my-3 mx-1 text-4xl font-bold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+              🌊 Waves
+              </p>
+            </div>
+            <p className="my-3 text-4xl font-bold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+              Store
+            </p>
+          </div>
+        </div>
+        <button
         onClick={connectWalletHandler}
         className="btn-primary w-40 rounded mt-10"
       >
         Connect Wallet
       </button>
+      </div>
+    </div>
+
     )
   }
 

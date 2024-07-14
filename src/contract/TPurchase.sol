@@ -32,7 +32,7 @@ contract ProductPurchase{
     ) public {
 
         uint256 totalCost = pCost * qty;
-        uint256 totalReward = rwd * 10**18 * qty;
+        uint256 totalReward = rwd * qty;
 
         Purchase memory newPurchase = Purchase({
             userWalletAddress : usrAdd,

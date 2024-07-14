@@ -14,6 +14,8 @@ import TPurchase from './contract/TPurchase.json'
 const waterContractAddress = '0x3c81c82655e98ae183a1d2fc4c038be15d2a252f'
 const waterABI = Water
 
+const CORESCAN_BASE_URL = 'https://scan.test.btcs.network/address/'
+
 function App() {
 
   const [currentAccount, setCurrentAccount] = useState(null)
@@ -60,6 +62,7 @@ function App() {
 
   const connectWalletButton = () => {
     return (
+      <div className="flex items-center justify-center h-screen">
       <div className="mx-auto max-w-screen-xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
       <div className="text-center">
         <div className="mb-12">
@@ -82,6 +85,18 @@ function App() {
         Connect Wallet
       </button>
       </div>
+      <div className="mt-8 text-center">
+          <span className="text-mm">Connect Water Token address in your wallet </span>
+          <a
+            target="_blank"
+            className="ml-2 text-mm  text-orange-400 hover:text-orange-600"
+            href={CORESCAN_BASE_URL.concat(waterContractAddress)}
+            rel="noreferrer"
+          >
+            {contractAddress}
+          </a>
+        </div>   
+    </div>
     </div>
 
     )

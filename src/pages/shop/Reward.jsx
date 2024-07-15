@@ -70,10 +70,15 @@ export const Reward = () => {
         <br/>
         <h1 className="ml-2 text-mm  text-blue-400" >🌊 Click Claim Reward to Claim {localStorage.getItem('totalReward')} Tokens</h1>
         {/* <button className="btn-primary w-100 rounded mt-10" onClick={rewardSystem}>Claim Reward</button> */}
-        <button className="btn-primary w-100 rounded mt-10" disabled={disabled} onClick={()=>{
+        <button className="btn-primary w-100 rounded mt-10"           style={{
+            backgroundColor: disabled ? '#CCCCCC' : '#007bff',
+            color: disabled ? '#666666' : '#ffffff',
+            cursor: disabled ? 'not-allowed' : 'pointer'
+          }}
+          disabled={disabled} onClick={()=>{
           handleClick()
           rewardSystem();
-        }}>Claim Reward</button>
+        }}> {disabled ? 'Claiming Reward...' : 'Claim Reward'}</button>
       </div>
     </div>
   );

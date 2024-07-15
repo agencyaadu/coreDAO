@@ -6,14 +6,22 @@ import "./shop.css";
 import "../../App.css"
 import { ethers } from 'ethers'
 import { WaterContractAddress, WaterABI } from "../../constant";
+import { useNavigate } from "react-router-dom";
 
 
 
 export const Reward = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
+  const [disabled, setDisabled] = useState(false);
+
+  const handleClick = () => {
+    setDisabled(true);
+  }
 
   const currentAccount = localStorage.getItem("userWalletAddress")
+
+  const navigate = useNavigate();
 
   console.log("afd"+currentAccount)
   
@@ -42,6 +50,7 @@ export const Reward = () => {
           console.log(
             `Transaction confirmed: https://scan.test.btcs.network/tx/${reward_tx.hash}`
           )
+          navigate('/')
     
         } else {
           console.log('Ethereum object does not exist')
@@ -60,7 +69,11 @@ export const Reward = () => {
         <br/>
         <br/>
         <h1 className="ml-2 text-mm  text-blue-400" >🌊 Click Claim Reward to Claim {localStorage.getItem('totalReward')} Tokens</h1>
-        <button className="btn-primary w-100 rounded mt-10" onClick={rewardSystem}>Claim Reward</button>
+        {/* <button className="btn-primary w-100 rounded mt-10" onClick={rewardSystem}>Claim Reward</button> */}
+        <button className="btn-primary w-100 rounded mt-10" disabled={disabled} onClick={()=>{
+          handleClick()
+          rewardSystem();
+        }}>Claim Reward</button>
       </div>
     </div>
   );

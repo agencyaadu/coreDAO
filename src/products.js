@@ -14,7 +14,7 @@ export const PRODUCTS = [
     price: 999.0,
     productImage: product1,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 333,
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const PRODUCTS = [
     price: 1999.0,
     productImage: product2,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 666,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const PRODUCTS = [
     price: 700.0,
     productImage: product3,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 233,
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const PRODUCTS = [
     price: 250.0,
     productImage: product4,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 83,
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ export const PRODUCTS = [
     price: 199,
     productImage: product5,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 66,
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ export const PRODUCTS = [
     price: 150.0,
     productImage: product6,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 50,
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ export const PRODUCTS = [
     price: 270.0,
     productImage: product7,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 90,
   },
   {
     id: 8,
@@ -70,6 +70,6 @@ export const PRODUCTS = [
     price: 400.0,
     productImage: product8,
     productType: "T-Shirt",
-    reward: 300,
+    reward: 133,
   },
 ];
